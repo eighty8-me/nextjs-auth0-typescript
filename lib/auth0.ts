@@ -15,6 +15,7 @@ export default initAuth0({
   domain: getServerSetting('AUTH0_DOMAIN'),
   redirectUri: getServerSetting('AUTH0_REDIRECT_URI', 'http://localhost:3000/api/callback'),
   postLogoutRedirectUri: getServerSetting('AUTH0_POST_LOGOUT_REDIRECT_URI', 'http://localhost:3000/'),
+  audience: 'http://localhost:8009/',
   session: {
     cookieSecret: getServerSetting('AUTH0_COOKIE_SECRET'),
     cookieLifetime: 7200,
